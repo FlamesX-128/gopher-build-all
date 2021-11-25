@@ -74,7 +74,7 @@ func main() {
 	projectDir := flag.String("project-directory", "", "Path to the project")
 	binaryName := flag.String("binary-name", "main", "Binary name when building")
 	goruntines := flag.Int("max-goruntines", 3, "Maximum quantity of goroutines.")
-	onlyIn := flag.String("onlyIn", "", "Build only on these systems")
+	onlyIn := flag.String("only-in", "", "Build only on these systems")
 	flag.Parse()
 
 	if projectDir == nil || *projectDir == "" {
