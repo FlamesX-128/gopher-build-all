@@ -15,16 +15,22 @@ You can alter a few things when creating the binaries.
 
 - `project-directory` ─ This is the path where to look for the main file and it will create the folder with the binaries, by default it uses the console path.
 
+## Install
+
+```bash
+$ go install github.com/FlamesX-128/nextBuild@latest
+```
+
 ## **Example**
 
 ### **Project**
 
 ![image](https://user-images.githubusercontent.com/78381898/143496673-c7a55734-ee4d-4cae-83ec-475eb8063293.png)
 
-### **Command**
+### Command
 
 ```bash
-$ go run main.go -binary-name="nextBuild" -max-goruntines=6
+$ nextBuild -binary-name="nextBuild" -max-goruntines=6
 ```
 
 ### **Out**
