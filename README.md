@@ -1,38 +1,85 @@
-# **nextBuild.go**
+# **gopher-build-all**
 Create all possible binaries of a project in go
 
 ## **ChangeLog**
-- `0.0.1` ─ First release.
+<details>
+  <summary>0.0.2</summary>
+  
+  ## **Flags**
 
-## Flags
+  - **bin-folder-name** ─ With this flag you can rename the output directory.
+
+  - **bin-name** ─ binary-name renamed to bin-name.
+
+  - **only-systems** ─ only-in renamed to only-systems.
+
+  - **sub-folder** ─ A folder is created where the binary is saved.
+
+</details>
+ 
+<details>
+  <summary>0.0.1</summary>
+
+  First release.
+
+</details>
+
+## **Install**
+
+**Go 1.17+**
+
+```bash
+$ go install github.com/FlamesX-128/gopher-builds-all@latest
+```
+
+## **Flags**
 You can alter a few things when creating the binaries.
 
-- `binary-name` ─ Rename the created file.
+**bin-folder-name**
 
-- `max-goruntines` ─ Maximum number of goroutines, with these the processes to create the binaries are divided.
+  - **description:** ─ The name of the folder where the binaries will be placed.
 
-- `only-in` ─ They only create the binaries on specific systems, like linux, windows, darwin or other.
+  - **default** ─ `bin`
 
-- `project-directory` ─ This is the path where to look for the main file and it will create the folder with the binaries, by default it uses the console path.
+  - **usage:** ─ `-bin-folder-name="dist"`
 
-## Install
+**bin-name**
 
-```bash
-$ go install github.com/FlamesX-128/nextBuild@latest
-```
+  - **description:** ─ Name given to the binary.
 
-## **Example**
+  - **default** ─ `main`
 
-### **Project**
+  - **usage:** ─ `-bin-name="gopher-build-all"`
 
-![image](https://user-images.githubusercontent.com/78381898/143496673-c7a55734-ee4d-4cae-83ec-475eb8063293.png)
 
-### Command
+**max-goruntines**
 
-```bash
-$ nextBuild -binary-name="nextBuild" -max-goruntines=6
-```
+  - **description:** ─ Used to indicate the maximum number of goroutines.
 
-### **Out**
+  - **default** ─ `3`
 
-![image](https://user-images.githubusercontent.com/78381898/143496842-b8f166cb-55a6-4e07-803f-ec279cbb8713.png)
+  - **usage:** ─ `-max-goruntines=5`
+
+**only-systems**
+
+  - **description:** ─ Used to indicate to only build on specific operating systems.
+
+  - **default** ─ `""` *All possible systems*
+
+  - **usage:** ─ `-only-systems="linux windows"`
+
+**project-directory**
+
+  - **description:** ─ It is used to indicate which is the project path.
+
+  - **default** ─ `""` *The path where it was called*
+
+  - **usage:** ─ `-project-directory="/home/User/go/github.com/User/gopher-build-all/"` *in linux*
+
+**sub-folder**
+
+  - **description:** ─ It is used to indicate if a sub folder should be created for the file.
+
+  - **default** ─ `true`
+
+  - **usage:** ─ `-sub-folder=true`
