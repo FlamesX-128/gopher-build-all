@@ -29,7 +29,7 @@ Create all possible binaries of a project in go
 **Go 1.17+**
 
 ```bash
-$ go install github.com/FlamesX-128/gopher-builds-all@latest
+$ go install github.com/FlamesX-128/gopher-build-all@latest
 ```
 
 ## **Flags**
